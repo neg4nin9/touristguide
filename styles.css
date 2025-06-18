@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.map-pin {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: translate(-50%, -100%);
+    transition: transform 0.3s ease;
+}
+
+.map-pin svg {
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+    color: #ff4757;
+}
+
+.map-pin:hover {
+    transform: translate(-50%, -100%) scale(1.2);
+}
+
+.places-container {
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.place {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.place h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.info-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-btn svg {
+    width: 24px;
+    height: 24px;
+    color: #333;
+}
+
+.info-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.info-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.info-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    text-align: left;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.info-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.close-info-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#back-to-top-btn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: rgb(255, 255, 255); /* Semi-transparent background */
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 9999px;
+  border-color: #f8f9fa;
+}
+
+#back-to-top-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+#back-to-top-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken on hover */
+}
+
+.map-wrapper {
+  width: 80%;
+  margin: 2rem auto;
+  height: 800px;
+  overflow: hidden;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 25px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#overlay-ok-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.map-pin svg {
+  width: 48px;
+  height: 48px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.references-container {
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 25px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.references-toggle {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.references-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+.references-content {
+  display: none;
+  padding: 1rem 2rem;
+}
+
+.references-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.references-content li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.references-content a {
+  color: #0066cc;
+  word-break: break-all;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}

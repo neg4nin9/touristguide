@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddy's San Ramón Tourist Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Eddy's San Ramón Tourist Guide</h1>
+  </header>
+  <div class="map-wrapper">
+    <div class="map-container">
+      <img src="sanramonmap/sanramonmap.jpg" alt="San Ramón Map" class="map">
+      <button class="map-pin" data-place="place1" style="left: 84%; top: 92%">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path fill="currentColor" d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 5.25 8.5 15.5 8.5 15.5s8.5-10.25 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+        </svg>
+      </button>
+      <button class="map-pin" data-place="place2" style="left: 35%; top: 9%">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path fill="currentColor" d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 5.25 8.5 15.5 8.5 15.5s8.5-10.25 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+        </svg>
+      </button>
+      <button class="map-pin" data-place="place3" style="left: 60%; top: 82%">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path fill="currentColor" d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 5.25 8.5 15.5 8.5 15.5s8.5-10.25 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+        </svg>
+      </button>
+      <div class="map-overlay">
+        <div class="overlay-content">
+          <p>Click on a pin to explore San Ramón's beautiful destinations!</p>
+          <button id="overlay-ok-btn">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="back-to-top-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M12 2L4.5 20.291l.707.707L12 18l6.793 2.998.707-.707L12 2z" />
+    </svg>
+  </button>
+
+  <div class="places-container">
+    <section id="place1" class="place">
+      <h2>San Ramón Nonato Church (La Parroquia)</h2>
+      <div class="slider">
+        <div class="slides">
+          <img src="laparroquia/San_ramon_-_panoramio.jpg" alt="San Ramon Panoramic View">
+          <img src="laparroquia/San_Ramón_Nonato_Church,_Costa_Rica_01.jpg" alt="La Parroquia Church">          
+          <img src="laparroquia/parqueiluminado.jpg" alt="Illuminated Park">
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+        <button class="info-btn">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+        </button>
+        <div class="info-overlay">
+          <div class="info-content">
+            <p>As the most emblematic and well known place in San Ramón, Alajuela, La Parroquia Church –and its adjacent park– is one of the first places people go to explore the local culture and livelihood.</p>
+            <p>This building was constructed by the population of San Ramón over the course of 26 years, from 1928 to 1954. It has an eclectic design, combining gothic and romanic elements.</p>
+            <p>Every August 30th, people from all over San Ramón and beyond come together to celebrate the Entrada de los Santos (Parade of the Saints), a commemorative parade unique to this region. (Parroquia San Ramón Nonato)</p>
+            <button class="close-info-btn">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="place2" class="place">
+      <h2>Alberto Manuel Brenes Biological Reserve</h2>
+      <div class="slider">
+        <div class="slides">
+          <img src="ambreserve/esta-de-rio.jpg" alt="River in the Reserve">
+          <img src="ambreserve/orquideas.jpg" alt="Orchids in the Reserve">
+          <img src="ambreserve/puma.webp" alt="Puma in the Reserve">
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+        <button class="info-btn">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+        </button>
+        <div class="info-overlay">
+          <div class="info-content">
+            <p>Administered by Universidad de Costa Rica, this is one of the most important biological reserves in the country. It's mostly formed by rainforest and cloud forest.</p>
+            <p>This reserve, with varying altitude, has a wide range of both flora and fauna; from small animals like birds and insects, to big animals like pumas and tapirs. It's also rich in plants like ferns, orchids, plants with medical potential against parasites, and others. (Universidad de Costa Rica)</p>
+            <button class="close-info-btn">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="place3" class="place">
+      <h2>Capilla Ámbar Butterfly Garden</h2>
+      <div class="slider">
+        <div class="slides">
+          <img src="capillaambar/outside.jpg" alt="Capilla Ámbar Outside View">
+          <img src="capillaambar/inside.jpg" alt="Capilla Ámbar Inside View">
+          <img src="capillaambar/pond.jpg" alt="Capilla Ámbar Pond">
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+        <button class="info-btn">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+        </button>
+        <div class="info-overlay">
+          <div class="info-content">
+            <p>This garden, as its name implies, is dedicated to the breeding, exhibition, and conservation of butterflies. It's a tourist destination as well as an educational one, which makes it convenient for all ages.</p>
+            <p>It has plenty of beautiful flowering shrubs and, though not its main attraction, it has a barn with animals, a pond, hammocks, etc.</p>
+            <p>The main building is a chapel-like facility with flowerpots and colored glass.</p>
+            <p>It also has an area for children, trails, a picnic area, among others; all of these have accessibility for people with disabilities, elderly people, and baby carts. (Capilla Ámbar - FEF)</p>
+            <button class="close-info-btn">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+  <div class="references-container">
+    <button class="references-toggle">References ▼</button>
+    <div class="references-content">
+      <ul>
+        <li>Parroquia San Ramón Nonato. (s.f.). <i>Historia y generalidades.</i> Google Sites. <a href="https://sites.google.com/view/parroquiadesanramon/qui%C3%A9nes-somos/historia-y-generalidades" target="_blank">https://sites.google.com/view/parroquiadesanramon/qui%C3%A9nes-somos/historia-y-generalidades</a></li>
+        <li>Universidad de Costa Rica, Sede de Occidente. (s.f.). <i>Reserva Biológica Alberto Manuel Brenes.</i> <a href="https://so.ucr.ac.cr/es/investigacion/reserva-biologica-alberto-manuel-brenes" target="_blank">https://so.ucr.ac.cr/es/investigacion/reserva-biologica-alberto-manuel-brenes</a></li>
+        <li>Capilla Ámbar - FEF. (2025). <i>Para visitar Capilla Ambar.</i> <a href="https://www.facebook.com/FincaEdgarFernandez/posts/1529677731351033" target="_blank">https://www.facebook.com/FincaEdgarFernandez/posts/1529677731351033</a></li>
+      </ul>
+    </div>
+  </div>
+
+<footer>
+    <p>San Ramón Tourist Guide - Developed with JS and CSS</p>
+  </footer>
+    <script src="script.js"></script>
+  
+</body>
+</html>
